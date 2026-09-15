@@ -1,0 +1,138 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[bandwidth]
+command=$SCRIPT_DIR/bandwidth.sh
+interval=1
+
+[bluetooth]
+label=
+command=$SCRIPT_DIR/bluetooth.sh
+interval=5
+
+[music]
+command=$SCRIPT_DIR/music.sh
+interval=2
+
+[volume]
+label=󰕾
+interval=1
+separator=false
+command=$SCRIPT_DIR/volume.sh
+
+[mic]
+label=
+interval=1
+command=$SCRIPT_DIR/mic.sh
+
+[network]
+label=Wifi
+interval=5
+command=$SCRIPT_DIR/network.sh
+separator=true
+
+# Disk
+label=
+command=$SCRIPT_DIR/disk.sh
+interval=3
+separator=true
+
+# Memory
+[memory]
+label= 
+command=$SCRIPT_DIR/ram.sh
+interval=3
+separator=false
+
+# CPU
+[cpu]
+#label= 
+command=$SCRIPT_DIR/cpu.sh
+interval=1
+separator=false
+
+# Temperature
+[temperature]
+label=
+command=$SCRIPT_DIR/temp.sh
+interval=1
+
+# Battery
+[battery]
+label=󰁹
+command=$SCRIPT_DIR/battery.sh
+interval=30
+
+# Date
+[time]
+command=$SCRIPT_DIR/time.sh
+interval=1
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+# Set to %any to automatically pick (Requires playerctl >=2.1.1)
+#[mediaplayer]
+# This picks any player, with vlc as first, and spotify as last choice
+#instance=vlc,%any,spotify
+#interval=5
+#signal=10
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
+
+#[keyindicator]
+#KEY=NUM
+#markup=pango
+#interval=once
+#signal=11

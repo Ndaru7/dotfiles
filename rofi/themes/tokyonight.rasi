@@ -1,0 +1,106 @@
+* {
+    bg-col:           #11121d;
+    bg-col-light:     #1a1b2a;
+    border-col:       #3b4261;
+    selected-col:     #7aa2f7;
+    fg-col:           #c0caf5;
+    fg-col2:          #9aa5ce;
+    blue:             #7aa2f7;
+    width:            600;
+    font: "Iosevka Nerd Font 11";
+}
+
+window {
+    height: 360px;
+
+    background-color: @bg-col;
+
+    border: 2px;
+    border-color: @border-col;
+
+    border-radius: 14px;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt, entry];
+
+    background-color: @bg-col-light;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    margin: 12px;
+}
+
+prompt {
+    background-color: @selected-col;
+
+    text-color: #11121d;
+
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    margin: 0px 12px 0px 0px;
+}
+
+entry {
+    background-color: @bg-col-light;
+
+    text-color: @fg-col;
+
+    placeholder-color: @fg-col2;
+
+    padding: 8px;
+}
+
+listview {
+    background-color: @bg-col;
+
+    columns: 1;
+
+    lines: 8;
+
+    spacing: 8px;
+
+    padding: 10px 14px 14px;
+}
+
+element {
+    background-color: @bg-col;
+
+    text-color: @fg-col;
+
+    border-radius: 10px;
+
+    padding: 10px;
+}
+
+element normal.normal {
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+element selected.normal {
+    background-color: @selected-col;
+    text-color: #11121d;
+}
+
+element-icon {
+    size: 24px;
+
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+
+    text-color: inherit;
+
+    vertical-align: 0.5;
+}

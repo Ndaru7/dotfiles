@@ -1,0 +1,210 @@
+/* Colors (Tokyo Night) */
+
+@define-color foreground        #c0caf5;
+/* @define-color background        rgba(26, 27, 38, 0.8); */
+@define-color background        rgba(17, 18, 29, 0.9);
+
+@define-color orange            #ff9e64;
+@define-color gray              #565f89;
+@define-color black             #1a1b26;
+@define-color brblk             #444b6a; 
+
+@define-color red               #f7768e;
+@define-color green             #9ece6a;
+@define-color yellow            #e0af68;
+@define-color cyan              #7dcfff;
+@define-color blue              #7aa2f7;
+@define-color purple            #bb9af7;
+@define-color pink              #ff75a0;
+@define-color white             #ffffff;
+
+/* Bright variants */
+@define-color brred             #ff899d;
+@define-color brgreen           #b9f27c;
+@define-color bryellow          #f5c77a;
+@define-color brcyan            #b4f9f8;
+@define-color brblue            #89b4fa;
+@define-color brpurple          #c7a9ff;
+@define-color brpink            #ff8ab3;
+
+/* Accent */
+@define-color arch_blue         #7aa2f7;
+
+/* Workspace colors */
+@define-color workspace_background          @background;
+@define-color workspace_button              @foreground;
+
+@define-color workspace_active              @black;
+@define-color workspace_active_background   @blue;
+
+@define-color workspace_urgent              @white;
+@define-color workspace_urgent_background   @red;
+
+@define-color workspace_hover               @black;
+@define-color workspace_hover_background    @purple;
+
+/* Alerts */
+@define-color critical      @red;
+@define-color warning       @yellow;
+
+
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @white;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 5px;
+    font-family: "Iosevka Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+}
+
+#workspaces {
+    transition: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+#workspaces button,
+#workspaces button.empty {
+    color: @blue;
+    border-radius: 5px;
+    padding: 0 6px;
+    min-width: 18px;
+    transition: none;
+}
+
+#workspaces button.active {
+    background: transparent;
+    color: @purple;
+    border-bottom: 2px solid @purple;
+    border-radius: 5px 5px 0 0;
+}
+
+#workspaces button.focused {
+    background: @workspace_active_background;
+    color: @workspace_active;
+    border-radius: 5px;
+    border-bottom: 2px solid @pink;
+}
+
+#workspaces button.urgent {
+    background: @workspace_urgent_background;
+    color: @workspace_urgent;
+    border-radius: 5px;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button:hover {
+    background: @workspace_hover_background;
+    color: @workspace_hover;
+    border-radius: 5px;
+}
+
+#workspaces button:not(.current_output) {
+    opacity: 0.5;
+}
+
+tooltip {
+    background: @background;
+    opacity: 0.95;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @purple;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+#mpris,
+#cpu,
+#disk,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#custom-notification,
+#clock,
+#window,
+#bluetooth,
+#temperature,
+#mpris {
+    background: transparent;
+    padding: 0px 5px;
+}
+
+#disk.critical,
+#temperature.critical {
+    background-color: @critical;
+}
+
+#disk.warning,
+#temperature.warning {
+    background-color: @warning;
+}
+
+#battery {
+    color: @green;
+    border-radius: 5px;
+}
+
+#battery.discharging {
+    color: @foreground;
+}
+
+#battery.warning:not(.charging) {
+    background: @warning;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @critical;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-power {
+    color: @red;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#tray {
+    background: @background;
+    border-radius: 5px;
+    margin: 5px 50px 5px 10px;
+}
+
+#wireplumber {
+    background: @background;
+}
+
+#wireplumber.source {
+    background: @background;
+}
+
+#custom-sep {
+    color: @brblk;
+}

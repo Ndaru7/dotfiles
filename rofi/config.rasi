@@ -1,0 +1,17 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: " Apps ";
+    display-run: " Run ";
+    display-window: " Window ";
+    sidebar-mode: true;
+
+    font: "Iosevka Nerd Font 11";
+}
+
+@theme "~/.config/rofi/themes/tokyonight.rasi"

@@ -1,0 +1,41 @@
+# Theme Tokyo Night
+
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# Colors
+color=1a1b26
+
+inside-color=11121d
+ring-color=3b4261
+line-color=00000000
+separator-color=00000000
+
+key-hl-color=7aa2f7
+bs-hl-color=f7768e
+
+inside-ver-color=11121d
+ring-ver-color=7aa2f7
+
+inside-wrong-color=11121d
+ring-wrong-color=f7768e
+
+text-color=c0caf5
+text-ver-color=c0caf5
+text-wrong-color=f7768e
+
+layout-bg-color=11121d
+layout-text-color=c0caf5
+
+# Indicator
+indicator-idle-visible
+indicator-radius=110
+indicator-thickness=10
+
+# Clock
+clock
+timestr=%H:%M:%S
+datestr=%A, %d %B %Y
+font=JetBrainsMono Nerd Font
+font-size=24

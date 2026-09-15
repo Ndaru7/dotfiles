@@ -1,0 +1,53 @@
+[window]
+startup_mode = "Windowed"
+opacity = 0.8
+dynamic_title = true
+blur = true
+
+[font]
+size = 13
+
+[font.normal]
+family = "IosevkaNerdFont"
+style = "Regular"
+
+[font.bold]
+family = "IosevkaNerdFont"
+style = "Bold"
+
+[font.italic]
+family = "IosevkaNerdFont"
+style = "Italic"
+
+[cursor]
+style = {shape = "Block", blinking="on"}
+blink_interval = 500
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = true
+
+[colors.primary]
+background = "#000000"
+foreground = "#cdd6f4"
+
+[colors.normal]
+black   = "#45475a"
+red     = "#ff0000"
+green   = "#90ee90"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
